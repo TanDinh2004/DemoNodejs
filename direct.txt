@@ -1,0 +1,35 @@
+1. Lấy danh sách tất cả công việc (GET)
+Mở Postman, chọn New Tab.
+Chọn GET từ danh sách phương thức.
+Nhập URL: http://localhost:3000/todos
+Nhấn Send để gửi yêu cầu.
+Kết quả: Bạn sẽ nhận được danh sách các công việc dưới dạng JSON (ví dụ: danh sách rỗng nếu chưa có công việc nào).
+2. Thêm công việc mới (POST)
+Tạo một tab mới trong Postman và chọn phương thức POST.
+Nhập URL: http://localhost:3000/todos
+Chuyển sang tab Body, chọn raw và thiết lập JSON.
+Nhập dữ liệu JSON cho công việc mới, ví dụ:
+json
+Sao chép mã
+{
+    "task": "Học Node.js"
+}
+Nhấn Send để gửi yêu cầu.
+Kết quả: API sẽ trả về công việc vừa được thêm với ID và trạng thái completed ban đầu là false.
+3. Cập nhật trạng thái hoàn thành của công việc (PUT)
+Tạo một tab mới trong Postman và chọn phương thức PUT.
+Nhập URL: http://localhost:3000/todos/1 (thay 1 bằng ID của công việc cần cập nhật).
+Chuyển sang tab Body, chọn raw và thiết lập JSON.
+Nhập dữ liệu JSON để cập nhật trạng thái công việc, ví dụ:
+json
+Sao chép mã
+{
+    "completed": true
+}
+Nhấn Send để gửi yêu cầu.
+Kết quả: API sẽ trả về công việc với trạng thái completed đã được cập nhật.
+4. Xóa công việc (DELETE)
+Tạo một tab mới trong Postman và chọn phương thức DELETE.
+Nhập URL: http://localhost:3000/todos/1 (thay 1 bằng ID của công việc cần xóa).
+Nhấn Send để gửi yêu cầu.
+Kết quả: API sẽ trả về công việc đã xóa, hoặc một thông báo lỗi nếu không tìm thấy công việc.
